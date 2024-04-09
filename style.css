@@ -9,15 +9,18 @@ coloque nas sessões indicadas*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
    --cor-de-fundo: #F5F5F5;
    --cor-de-link: #000;
+   --color-de-texto: #464646;
+   --ancho-total: 80%;
 }
 
 body {
     box-sizing: border-box;
     background-color: var(--cor-de-fundo) ;
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1;
+    color: var(--color-de-texto);
 }
 ol, ul,li {
     list-style: none;
@@ -43,7 +46,10 @@ https://en.bem.info/methodology/quick-start/*/
 
 section.menu{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: var(--ancho-total);
+    margin: auto;
+    padding: 10px 0;
 }
 
 header.menu__header{
@@ -63,20 +69,72 @@ ul.menu__list{
     gap: 20px;
 }
 
-nav.menu__list{
-
-}
 
 /*Sección Title*/
 
 section.title{
+    width: var(--ancho-total);
+    margin: auto;
+    padding: 20px 0;
+}
 
+div.title__div{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    
+}
+
+div.title__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 18px;
+}
+
+
+img.title__profile{
+    width: 30%;
+    align-self: center;
+}
+
+h2.title__bio{
+    font-size: 3rem;
+    margin: 0;
+}
+
+h3.title__subsection{
+    margin: 0;
+}
+
+ul.title__network{
+    display: flex;
+    gap: 2rem;
+    padding-left: 0;
+    margin: 0;
 }
 
 /*Sección About*/
 
 section.about{
+    background-color: rgba(0, 0, 255, 0.1)
+}
 
+div.about__container{
+    display: flex;
+    flex-direction: column;
+    width: var(--ancho-total);
+    margin: auto;
+    padding: 20px 0;
+}
+
+h3.about__title{
+    font-size: 1.5rem;
+}
+
+#firma{
+    align-self: baseline;
 }
 
 /*Sección Hobbies*/
@@ -115,6 +173,7 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 /*Tablet*/
 @media (min-width: 768px) {
+  
 
 /* Menú */
 
@@ -132,6 +191,7 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 /*Mobile*/
 @media (min-width: 425px) {
+   
 
 /*Menu*/
 
