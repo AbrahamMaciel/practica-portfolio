@@ -256,28 +256,84 @@ ul.academic__courses__list {
   gap: 10px;
 }
 
-ul.academic__courses__list > li > *{
-    margin: 0;
+ul.academic__courses__list > li > * {
+  margin: 0;
 }
 
-li.academic__courses__item__img{
-    width: auto;
-    height: 250px;
-    background-color: #ffffff;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+li.academic__courses__item__img {
+  width: auto;
+  height: 250px;
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
-li.academic__courses__item__title{
-    font-size: 1.2rem;
-    font-weight: bold;
+li.academic__courses__item__title {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* experiencia*/
 
 section.experience {
+  padding: 10px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+h2.experience__section__title {
+  text-align: center;
+}
+
+div.experience__box {
+  display: flex;
+  flex-flow: row nowrap;
+  width: var(--ancho-total);
+  margin: auto;
+  gap: 12px;
+}
+
+div.experience__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+div.experience__info > * {
+  margin: 0;
+}
+
+div.experience__description{
+    display: flex;
+    gap: 4px;
+    box-sizing: border-box;
+}
+
+/* Tengo que checkear el html */
+div.experience__description > div{
+    padding: 15px 10px;
+}
+
+div.experience__repo{
+    background-color: none;
+    border: 2px solid #2A7AE4;
+}
+
+div.experience__repo > a{
+    color: #2A7AE4;
+}
+
+div.experience__demo{
+    background-color: #2A7AE4;
+    border: 2px solid #2A7AE4;
+}
+
+div.experience__demo > a{
+    color: #ffffff;
 }
 
 /*Contacto*/
