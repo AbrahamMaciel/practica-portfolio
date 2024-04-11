@@ -11,7 +11,15 @@ coloque nas sessões indicadas*/
   --cor-de-link: #000;
   --color-de-texto: #464646;
   --color-de-fondo-alt: #eaf2fd;
+  --color-linea: #2A7AE4;
   --ancho-total: 80%;
+
+  /* Vars del testeo Input */
+  --main-blue: #90caf9;
+  --main-white: #fff;
+  --main-grey: rgba(255, 255, 255, 0.23);
+  --main-dark-grey: #121212;
+  --main-ease: cubic-bezier(.65,.05,.36,1);
 }
 
 body {
@@ -307,38 +315,125 @@ div.experience__info > * {
   margin: 0;
 }
 
-div.experience__description{
-    display: flex;
-    gap: 4px;
-    box-sizing: border-box;
+div.experience__description {
+  display: flex;
+  gap: 4px;
+  box-sizing: border-box;
 }
 
 /* Tengo que checkear el html */
-div.experience__description > div{
-    padding: 15px 10px;
+div.experience__description > div {
+  padding: 15px 10px;
 }
 
-div.experience__repo{
-    background-color: none;
-    border: 2px solid #2A7AE4;
+div.experience__repo {
+  background-color: none;
+  border: 2px solid #2a7ae4;
 }
 
-div.experience__repo > a{
-    color: #2A7AE4;
+div.experience__repo > a {
+  color: #2a7ae4;
 }
 
-div.experience__demo{
-    background-color: #2A7AE4;
-    border: 2px solid #2A7AE4;
+div.experience__demo {
+  background-color: #2a7ae4;
+  border: 2px solid #2a7ae4;
 }
 
-div.experience__demo > a{
-    color: #ffffff;
+div.experience__demo > a {
+  color: #ffffff;
 }
 
 /*Contacto*/
 
-section.formcontato {
+section.formcontacto {
+  background-color: var(--color-de-fondo-alt);
+}
+
+div.formcontacto__text {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+
+div.formcontacto__text > p,
+h2 {
+  margin: 0;
+}
+
+div.formcontacto__contacto {
+  display: flex;
+  width: var(--ancho-total);
+  margin: auto;
+}
+
+form.formcontacto__form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Testeando Inputs tipo material UI*/
+
+.standard-input {
+    position: relative;
+}
+
+.standard-input input {
+    background-color: #ffffff;
+    color: #464646;
+    height: 3rem;
+    border: none;
+    border-bottom: 1px solid #cacaca;
+    border-radius: 4px;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 20px;
+    transition: .1s var(--main-ease);
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.standard-input label {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    color: #cacaca;
+    text-align: center;
+    transition: .2s var(--main-ease);
+    font-size: 1rem;
+    pointer-events: none;
+    padding: 0 5px;
+}
+
+.standard-input input:not(:placeholder-shown) ~ label,
+.standard-input input:focus ~ label {
+    top: 12px;
+    left: 0px;
+    font-size: 0.9rem;
+    padding-left: 20px;
+}
+
+.standard-input .underline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.2s var(--main-ease);
+    border-bottom: 2px solid #2A7AE4;
+}
+
+.standard-input input:focus ~ .underline {
+    transform: scaleX(1);
+}
+.standard-input input:hover {
+    border-bottom: 2px solid var(--main-white);
+}
+.standard-input input:focus ~ label {
+    color: var(--color-linea) !important;
 }
 
 /*footeer*/
