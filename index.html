@@ -281,7 +281,7 @@
           </div>
         </div>
 
-        <div class="experience__box">
+        <div class="experience__box--reversed">
           <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
           <img class="experience__img" src="assets\forca_print.png" />
           <div class="experience__info">
@@ -321,7 +321,7 @@
           </div>
         </div>
 
-        <div class="experience__box">
+        <div class="experience__box--reversed">
           <img class="experience__img" src="assets\forca2_print.png" />
           <div class="experience__info">
             <h3 class="experience__title">
@@ -356,7 +356,32 @@
               lo antes posible.
             </p>
             <form class="formcontacto__form" name="form">
-              <input
+
+              <!-- Testeando Inputs -->
+              <div class="standard-input formcontacto__input">
+                <input type="text" name="nombre" id="nombre" placeholder="" />
+                <label for="nombre">Nombre</label>
+                <span class="underline"></span>
+              </div>
+
+              <div class="standard-input formcontacto__input">
+                <input type="text" name="email" id="email" placeholder=" " />
+                <label for="email">E-mail</label>
+                <span class="underline"></span>
+              </div>
+
+              <div class="standard-input formcontacto__input">
+                <input type="text" name="asunto" id="asunto" placeholder=" " />
+                <label for="asunto">Asunto</label>
+                <span class="underline"></span>
+              </div>
+
+              <div class="standard-input formcontacto__textarea">
+                <textarea name="mensaje" id="mensaje" placeholder=" "></textarea>
+                <label for="mensaje" id="mensaje-label">Mensaje</label>
+                <span class="underline" id="mensaje-underline"></span>
+              </div>
+              <!-- <input
                 class="formcontacto__input"
                 type="text"
                 name="nombre"
@@ -381,20 +406,13 @@
                 id="mensagem"
                 name="mensaje"
                 placeholder="Mensaje"
-              ></textarea>
+              ></textarea> -->
+
+
               <button type="submit" class="formcontacto__botao">
                 Enviar mensaje
               </button>
             </form>
-
-            <!-- Testeando Inputs -->
-            <div class="standard-input formcontacto__form">
-                <input type="text" name="test" placeholder=" ">
-                <label for="test">Nombre</label>
-                <span class="underline"></span>
-            </div>
-
-
           </div>
         </div>
       </section>

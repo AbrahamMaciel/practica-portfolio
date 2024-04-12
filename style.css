@@ -304,6 +304,14 @@ div.experience__box {
   gap: 12px;
 }
 
+div.experience__box--reversed {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  width: var(--ancho-total);
+  margin: auto;
+  gap: 12px;
+}
+
 div.experience__info {
   display: flex;
   flex-direction: column;
@@ -356,38 +364,63 @@ div.formcontacto__text {
   flex-direction: column;
 }
 
-div.formcontacto__text > p,
-h2 {
+div.formcontacto__text > p {
   margin: 0;
+}
+
+h2.formcontacto__title{
+  margin: 0.5rem 0;
 }
 
 div.formcontacto__contacto {
   display: flex;
   width: var(--ancho-total);
   margin: auto;
+  gap: 1rem;
 }
 
 form.formcontacto__form {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
 }
 
-/* Testeando Inputs tipo material UI*/
+textarea#mensaje{
+  font-family: "Raleway", sans-serif;
+  color: var(--color-de-texto);
+  padding-bottom: 6rem;
+  resize: none;
+  /* margin-bottom: 0; */
+}
+
+/* Pequenos cambios a los elementos de el textarea mensaje ya que quedaba un poco distinto de los inputs */
+
+div.formcontacto__textarea > label{
+  top: 20%;
+  border-radius: 4px;
+}
+
+span#mensaje-underline{
+  bottom: 2px;
+}
+
+/* Inputs tipo material UI: Hecho por LeonGeldsch, solo los modifique un poco. Fuente: https://github.com/LeonGeldsch/css_material_input */
 
 .standard-input {
     position: relative;
 }
 
-.standard-input input {
+.standard-input input, .standard-input textarea {
     background-color: #ffffff;
     color: #464646;
     height: 3rem;
     border: none;
-    border-bottom: 1px solid #cacaca;
+    border-bottom: 2px solid #cacaca;
     border-radius: 4px;
     padding-left: 20px;
     padding-top: 20px;
-    font-size: 20px;
+    font-size: 18px;
     transition: .1s var(--main-ease);
     outline: none;
     box-sizing: border-box;
@@ -409,11 +442,14 @@ form.formcontacto__form {
 }
 
 .standard-input input:not(:placeholder-shown) ~ label,
-.standard-input input:focus ~ label {
+.standard-input input:focus ~ label, 
+.standard-input textarea:not(:placeholder-shown) ~ label,
+.standard-input textarea:focus ~ label{
     top: 12px;
     left: 0px;
     font-size: 0.9rem;
     padding-left: 20px;
+    color: var(--color-linea);
 }
 
 .standard-input .underline {
@@ -426,19 +462,33 @@ form.formcontacto__form {
     border-bottom: 2px solid #2A7AE4;
 }
 
-.standard-input input:focus ~ .underline {
+.standard-input input:focus ~ .underline,
+.standard-input textarea:focus ~ .underline {
     transform: scaleX(1);
 }
-.standard-input input:hover {
-    border-bottom: 2px solid var(--main-white);
+.standard-input input:hover,
+.standard-input textarea:hover {
+    border-bottom: 2px solid #90caf9;
 }
-.standard-input input:focus ~ label {
+.standard-input input:focus ~ label 
+.standard-input textarea:focus ~ label{
     color: var(--color-linea) !important;
+}
+
+/* Otra yerba mas para evitar que el autofill arruine los inputs. fuente: https://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete */
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
 }
 
 /*footeer*/
 
 section.footer {
+  background-color: cubic-bezier(.65,.05,.36,1);
 }
 
 /* Vamos a desafiarnos trabajando con responsividad?
