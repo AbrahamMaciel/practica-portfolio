@@ -80,6 +80,14 @@ ul.menu__list {
   gap: 20px;
 }
 
+li.menu__list__item > a{
+  color: var(--color-de-texto);
+}
+
+li.menu__list__item:last-child{
+  font-weight: bold;
+}
+
 /*Sección Title*/
 
 section.title {
@@ -89,6 +97,7 @@ section.title {
 }
 
 div.title__div {
+  gap: 1rem;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -98,7 +107,7 @@ div.title__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 18px;
 }
 
@@ -119,9 +128,19 @@ p.title__subsection {
 
 ul.title__network {
   display: flex;
-  gap: 2rem;
+  gap: 1.8rem;
   padding-left: 0;
   margin: 0;
+  font-size: 1rem;
+  flex-wrap: wrap;
+}
+
+li.title__network__item > a{
+  color: var(--color-de-texto);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Sección About*/
@@ -291,6 +310,7 @@ section.experience {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  display: none; /*Borrar esta bosta*/ 
 }
 
 h2.experience__section__title {
@@ -393,7 +413,7 @@ textarea#mensaje {
   color: var(--color-de-texto);
   padding-bottom: 6rem;
   resize: none;
-  /* margin-bottom: 0; */
+  
 }
 
 /* Pequenos cambios a los elementos de el textarea mensaje ya que quedaba un poco distinto de los inputs */
@@ -519,10 +539,51 @@ input[data-autocompleted] {
 Utiliza las referencias de los breakpoints @media abajo */
 
 /*Tablet*/
-@media (min-width: 768px) {
-  /* Menú */
+@media (max-width: 768px) {
 
-  /*title*/
+  :root{
+    --ancho-total: 90%;
+    /* padding: 0px 2rem; */
+  }
+
+  /* Menú */
+  section.menu{
+    
+  }
+
+  li.menu__list__item:nth-last-child(n+2) {
+    display: none;
+  }
+
+  /*Title*/
+
+  div.title__div{
+    gap: 2rem;
+  }
+
+  img.title__profile{
+    width: 20%;
+  }
+
+  div.title__container{
+    gap: 8px;
+  }
+
+  h2.title__bio{
+    font-size: 1.5rem;
+  }
+
+  p.title__subsection{
+    font-size: 1rem;
+  }
+
+  /* About */
+
+  div.about__container > * {
+    margin: 0;
+    width: auto;
+    flex-grow: 0;
+  }
 
   /*Skills*/
 
