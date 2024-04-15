@@ -80,11 +80,11 @@ ul.menu__list {
   gap: 20px;
 }
 
-li.menu__list__item > a{
+li.menu__list__item > a {
   color: var(--color-de-texto);
 }
 
-li.menu__list__item:last-child{
+li.menu__list__item:last-child {
   font-weight: bold;
 }
 
@@ -135,7 +135,7 @@ ul.title__network {
   flex-wrap: wrap;
 }
 
-li.title__network__item > a{
+li.title__network__item > a {
   color: var(--color-de-texto);
   font-weight: 500;
   display: flex;
@@ -179,7 +179,7 @@ section.skills {
   width: var(--ancho-total);
   background-color: #f5f5f5;
   margin: auto;
-  padding: 0 0 40px 0;
+  padding: 1rem 0 1rem 0;
 }
 
 h3.skills__title {
@@ -189,6 +189,7 @@ h3.skills__title {
 div.skills__line {
   display: flex;
   gap: 10px;
+  padding: 1rem 0;
 }
 
 div.skills__line > div.skills__box {
@@ -218,7 +219,7 @@ section.hobbies {
   width: var(--ancho-total);
   background-color: #f5f5f5;
   margin: auto;
-  padding: 0 0 40px 0;
+  padding: 1rem 0 1rem 0;
 }
 
 h3.hobbies__title {
@@ -228,6 +229,7 @@ h3.hobbies__title {
 div.hobbies__line {
   display: flex;
   gap: 10px;
+  padding: 1rem 0;
 }
 
 div.hobbies__line > div.hobbies__box {
@@ -243,7 +245,6 @@ div.hobbies__line > div.hobbies__box {
 
 div.hobbies__box > ul {
   margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -255,7 +256,7 @@ div.hobbies__box > ul {
 
 section.academic {
   background-color: var(--color-de-fondo-alt);
-  padding: 40px 0 60px 0;
+  padding: 1rem 0;
 }
 
 div.academic__container {
@@ -306,11 +307,10 @@ li.academic__courses__item__title {
 /* experiencia*/
 
 section.experience {
-  padding: 10px 0 40px 0;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  display: none; /*Borrar esta bosta*/ 
 }
 
 h2.experience__section__title {
@@ -377,7 +377,7 @@ div.experience__demo > a {
 
 section.formcontacto {
   background-color: var(--color-de-fondo-alt);
-  padding: 60px 0px;
+  padding: 1rem 0;
 }
 
 div.formcontacto__text {
@@ -413,7 +413,6 @@ textarea#mensaje {
   color: var(--color-de-texto);
   padding-bottom: 6rem;
   resize: none;
-  
 }
 
 /* Pequenos cambios a los elementos de el textarea mensaje ya que quedaba un poco distinto de los inputs */
@@ -540,40 +539,38 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 /*Tablet*/
 @media (max-width: 768px) {
-
-  :root{
+  :root {
     --ancho-total: 90%;
     /* padding: 0px 2rem; */
   }
 
   /* Menú */
-  section.menu{
-    
+  section.menu {
   }
 
-  li.menu__list__item:nth-last-child(n+2) {
+  li.menu__list__item:nth-last-child(n + 2) {
     display: none;
   }
 
   /*Title*/
 
-  div.title__div{
+  div.title__div {
     gap: 2rem;
   }
 
-  img.title__profile{
+  img.title__profile {
     width: 20%;
   }
 
-  div.title__container{
+  div.title__container {
     gap: 8px;
   }
 
-  h2.title__bio{
+  h2.title__bio {
     font-size: 1.5rem;
   }
 
-  p.title__subsection{
+  p.title__subsection {
     font-size: 1rem;
   }
 
@@ -587,11 +584,79 @@ Utiliza las referencias de los breakpoints @media abajo */
 
   /*Skills*/
 
+  div.skills__line{
+    flex-wrap: wrap;
+  }
+
+  div.skills__line > div.skills__box{
+    flex-basis: 30%;
+  }
+
+  div.skills__box > ul{
+    padding: 20px 20px;
+  }
+
   /*Hobbies*/
+
+  div.hobbies__line{
+    flex-wrap: wrap;
+  }
+
+  div.hobbies__line > div.hobbies__box{
+    flex-basis: 30%;
+  }
+
+  div.hobbies__box > ul{
+    padding: 20px 20px;
+  }
 
   /*Formación Académica*/
 
+  div.academic__courses{
+    padding: 1rem 0;
+  }
+
+  li.academic__courses__item__img{
+    height: 125px;
+  }
+
+  li.academic__courses__item__img > img{
+    width: 50%;
+  }
+
   /*Experiencia Profesional*/
+
+  div.experience__box{
+    flex-direction: column;
+  }
+
+  div.experience__box--reversed{
+    flex-direction: column;
+  }
+
+  /* Contacto */
+
+  div.formcontacto--left{
+    display: none;
+  }
+
+  div.formcontacto__text{
+    flex-grow: 1;
+  }
+
+  /* Esto cambia el textinput tipo MaterialUI que aparecia con barra que quedaba mal */
+  textarea#mensaje{
+    padding-bottom: 0;
+    height: 6rem;
+  }
+
+  .standard-input textarea{
+    padding-top: 22px;
+  }
+
+  button.formcontacto__boton{
+    align-self: baseline;
+  }
 }
 
 /*Mobile*/
