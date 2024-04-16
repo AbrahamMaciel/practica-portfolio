@@ -55,12 +55,12 @@ https://en.bem.info/methodology/quick-start/*/
 
 /*Sección Menu*/
 
-section.menu{
+section.menu {
   display: flex;
   justify-content: center;
 }
 
-header.menu__header{
+header.menu__header {
   flex-basis: var(--ancho-total);
   display: flex;
   align-items: center;
@@ -68,25 +68,25 @@ header.menu__header{
   gap: 8px;
 }
 
-nav.menu__list{
+nav.menu__list {
   display: flex;
   flex-grow: 1;
   flex-basis: var(--ancho-total);
   padding-left: 1rem;
 }
 
-div.menu__logo{
+div.menu__logo {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-h3.menu__title{
+h3.menu__title {
   margin: 0;
   font-size: 20px;
 }
 
-ul.menu__list{
+ul.menu__list {
   display: flex;
   flex-grow: 1;
   align-items: end;
@@ -96,7 +96,7 @@ ul.menu__list{
   gap: 2rem;
 }
 
-li.menu__list__item:last-child{
+li.menu__list__item:last-child {
   font-weight: bold;
 }
 
@@ -423,7 +423,8 @@ form.formcontacto__form {
 textarea#mensaje {
   font-family: "Raleway", sans-serif;
   color: var(--color-de-texto);
-  padding-bottom: 6rem;
+  /* padding-bottom: 6rem; */
+  height: 8rem;
   resize: none;
 }
 
@@ -584,6 +585,10 @@ Utiliza las referencias de los breakpoints @media abajo */
     font-size: 1rem;
   }
 
+  ul.title__network{
+    justify-content: space-between;
+  }
+
   /* About */
 
   div.about__container > * {
@@ -671,13 +676,22 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 /*Mobile*/
 @media (max-width: 425px) {
+
   /*Menu*/
-  header.menu__header{
-    align-items: baseline;
+  header.menu__header {
+    /* align-items: baseline; */
   }
 
-  header.menu__header > img{
+  header.menu__header > img {
     align-self: center;
+  }
+
+  li.menu__list__item:last-child {
+    font-weight: 100;
+  }
+
+  li.menu__list__item:last-child > a{
+    color: #464646;
   }
 
   /*Titulo*/
@@ -697,18 +711,27 @@ Utiliza las referencias de los breakpoints @media abajo */
 
   ul.title__network {
     gap: 4px;
+    justify-content: space-evenly;
+  }
+
+  li.title__network__item {
+    /* flex-grow: 1; */
+    /* flex-basis: 19%; */
   }
 
   li.title__network__item > a {
     color: #121212;
-    font-size: 16px;
+    font-size: 16px; 
   }
 
   /*Sección sobre mi*/
 
   /*Skills*/
+  section.skills{
+    width: 90%;
+  }
 
-  div.skills__line{
+  div.skills__line {
     gap: 20px;
     padding-bottom: 0;
   }
@@ -718,12 +741,15 @@ Utiliza las referencias de los breakpoints @media abajo */
   }
 
   div.skills__box > ul {
-    padding: 15px 10px;
+    gap: 10px;
   }
 
   /*Hobbies*/
+  section.hobbies{
+    width: 90%;
+  }
 
-  div.hobbies__line{
+  div.hobbies__line {
     gap: 20px;
     padding-bottom: 0;
   }
@@ -733,14 +759,51 @@ Utiliza las referencias de los breakpoints @media abajo */
   }
 
   div.hobbies__box > ul {
-    padding: 15px 10px;
+    gap: 10px;
   }
 
   /*Formación Académica*/
+  div.academic__container{
+    width: 85%;
+  }
+
+  div.academic__courses {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.academic__courses__box{
+    /* width: var(--ancho-total); */
+    width: 100%;
+  }
+
+  li.academic__courses__item__img {
+    height: 150px;
+  }
+
+  li.academic__courses__item__img > img {
+    width: 30%;
+  }
 
   /*Experiencia Profesional*/
 
+  div.experience__box {
+    width: 85%;
+  }
+
+  div.experience__box--reversed {
+    width: 85%;
+  }
+
+  div.experience__description {
+    gap: 8px;
+  }
+
   /*Contacto*/
+
+  div.formcontacto__contacto{
+    width: 85%;
+  }
 
   /*Footer*/
 }
