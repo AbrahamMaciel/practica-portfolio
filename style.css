@@ -439,6 +439,23 @@ span#mensaje-underline {
   bottom: 2px;
 }
 
+div.formcontacto__error{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #fd2b2b;
+  border-radius: 4px;
+  border-bottom: 2px solid #fd2b2b;
+}
+
+p.error__message{
+  padding: 0.4rem 1rem;
+  line-height: 120%;
+  margin: 0;
+}
+
+
 button.formcontacto__boton {
   padding: 15px 10px;
   color: #ffffff;
@@ -446,6 +463,10 @@ button.formcontacto__boton {
   border: 2px solid #2a7ae4;
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
+}
+
+button.formcontacto__boton:hover{
+  cursor: pointer;
 }
 
 /*footer*/
