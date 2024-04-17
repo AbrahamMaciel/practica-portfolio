@@ -396,6 +396,7 @@ div.formcontacto__text {
   display: flex;
   gap: 4px;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 div.formcontacto__text > p {
@@ -439,7 +440,7 @@ span#mensaje-underline {
   bottom: 2px;
 }
 
-div.formcontacto__error{
+div.formcontacto__error__message{
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -447,12 +448,28 @@ div.formcontacto__error{
   background-color: #fd2b2b;
   border-radius: 4px;
   border-bottom: 2px solid #fd2b2b;
+  padding: 0.5rem 0;
+
+  animation: show 2s forwards;
 }
 
-p.error__message{
+div.formcontacto__error__message.show{
+  display: flex;
+}
+
+p.error__message__item{
   padding: 0.4rem 1rem;
   line-height: 120%;
   margin: 0;
+}
+
+@keyframes show {
+  0%{
+    height: 0%;
+  }
+  100%{
+    height: 100%;
+  }
 }
 
 
@@ -699,9 +716,6 @@ Utiliza las referencias de los breakpoints @media abajo */
 @media (max-width: 425px) {
 
   /*Menu*/
-  header.menu__header {
-    /* align-items: baseline; */
-  }
 
   header.menu__header > img {
     align-self: center;
@@ -733,11 +747,6 @@ Utiliza las referencias de los breakpoints @media abajo */
   ul.title__network {
     gap: 4px;
     justify-content: space-evenly;
-  }
-
-  li.title__network__item {
-    /* flex-grow: 1; */
-    /* flex-basis: 19%; */
   }
 
   li.title__network__item > a {
