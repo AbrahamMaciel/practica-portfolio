@@ -359,30 +359,35 @@
               lo antes posible.
             </p>
             <form class="formcontacto__form" name="form">
-              <!-- Testeando Inputs -->
+
               <div class="standard-input formcontacto__input">
-                <input type="text" name="nombre" id="nombre" placeholder="" />
+                <p class="error__text" id="error__nombre">Nombre invalido o vacio</p>
+                <input type="text" name="nombre" id="nombre" placeholder="" oninput="hola(), viteh()"/>
                 <label for="nombre">Nombre</label>
                 <span class="underline"></span>
               </div>
 
               <div class="standard-input formcontacto__input">
+                <p class="error__text" id="error__email">Direccion de correo invalida</p>
                 <input type="text" name="email" id="email" placeholder=" " />
                 <label for="email">E-mail</label>
                 <span class="underline"></span>
               </div>
 
               <div class="standard-input formcontacto__input">
+                <p class="error__text" id="error__asunto">Maximo de 50 caracteres</p>
                 <input type="text" name="asunto" id="asunto" placeholder=" " />
                 <label for="asunto">Asunto</label>
                 <span class="underline"></span>
               </div>
 
               <div class="standard-input formcontacto__textarea">
+                <p class="error__text" id="error__mensaje">Maximo de 300 caracteres</p>
                 <textarea
                   name="mensaje"
                   id="mensaje"
                   placeholder=" "
+                  oninput="hola(), viteh()"
                 ></textarea>
                 <label for="mensaje" id="mensaje-label">Mensaje</label>
                 <span class="underline" id="mensaje-underline"></span>
@@ -396,7 +401,7 @@
                 <p class="error__message__item">Esto es un mensaje mas largo con explicacion y todo. IA Quita trabajoooo</p> -->
               </div>
 
-              <button type="submit" class="formcontacto__boton">
+              <button type="submit" class="formcontacto__boton disabled">
                 Enviar mensaje
               </button>
             </form>
