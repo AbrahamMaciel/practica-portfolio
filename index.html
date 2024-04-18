@@ -362,21 +362,21 @@
 
               <div class="standard-input formcontacto__input">
                 <p class="error__text" id="error__nombre">Nombre invalido o vacio</p>
-                <input type="text" name="nombre" id="nombre" placeholder="" oninput="hola(), viteh()"/>
+                <input type="text" name="nombre" id="nombre" placeholder="" oninput="validarForm()"/>
                 <label for="nombre">Nombre</label>
                 <span class="underline"></span>
               </div>
 
               <div class="standard-input formcontacto__input">
                 <p class="error__text" id="error__email">Direccion de correo invalida</p>
-                <input type="text" name="email" id="email" placeholder=" " />
+                <input type="text" name="email" id="email" placeholder=" " oninput="validarForm()" />
                 <label for="email">E-mail</label>
                 <span class="underline"></span>
               </div>
 
               <div class="standard-input formcontacto__input">
                 <p class="error__text" id="error__asunto">Maximo de 50 caracteres</p>
-                <input type="text" name="asunto" id="asunto" placeholder=" " />
+                <input type="text" name="asunto" id="asunto" placeholder=" " oninput="validarForm()" />
                 <label for="asunto">Asunto</label>
                 <span class="underline"></span>
               </div>
@@ -387,18 +387,10 @@
                   name="mensaje"
                   id="mensaje"
                   placeholder=" "
-                  oninput="hola(), viteh()"
+                  oninput="validarForm()"
                 ></textarea>
                 <label for="mensaje" id="mensaje-label">Mensaje</label>
                 <span class="underline" id="mensaje-underline"></span>
-              </div>
-
-              <div class="formcontacto__error__message">
-                <!-- <p class="error__message__item">Esto es un mensaje de error</p>
-                <p class="error__message__item">Esto es un mensaje de error todavia mas largo con explicacion y todo. IA Quita trabajoooo</p>
-                <p class="error__message__item">Esto es un mensaje mas largo con explicacion y todo. IA Quita trabajoooo</p>
-                <p class="error__message__item">Esto es un mensaje mas largo con explicacion y todo. IA Quita trabajoooo</p>
-                <p class="error__message__item">Esto es un mensaje mas largo con explicacion y todo. IA Quita trabajoooo</p> -->
               </div>
 
               <button type="submit" class="formcontacto__boton disabled">

@@ -1,19 +1,37 @@
- //Haz tú validación en javascript acá
+//Haz tú validación en javascript acá
+let mensajes = [];
 
- function hola(){
-    console.log('UCHIKUDAKE');
- }
+function validarCampoVacio(idTarget, mensajes) {
+  let target = document.getElementById(idTarget);
 
- function viteh(){
-    console.log('TOKI MICHITE!');
- }
+  if (target.value === "" || target.value === null) {
+    mensajes.push(`Se requiere un ${idTarget}.`);
+    
+    mostrarError(`error__${idTarget}`, mensajes.pop());
+  }
+}
 
+function mostrarError(idTarget, mensaje){
+    let errorParagraph = document.getElementById(idTarget);
+    errorParagraph.innerHTML = mensaje;
+    errorParagraph.classList.add('show');
+}
+
+function validarNombre() {
+  validarCampoVacio('nombre', mensajes);
+}
+
+function validarForm() {
+  console.log("proximamente... una validacion que las dominara a todas!.");
+
+  validarNombre();
+}
 
 // let formcontacto = document.querySelector('.formcontacto__form');
 
 // formcontacto.addEventListener('submit' , (e) => {
 //     let mensajes = [];
-    
+
 //     e.preventDefault();
 //     validarNombre(mensajes);
 //     validarEmail(mensajes);
@@ -22,16 +40,7 @@
 
 // });
 
-// function validarCampoVacio(idTarget, mensajes){
-//     let target = document.getElementById(idTarget);
-
-//     if(target.value === '' || target.value === null){
-//         mensajes.push(`Se requiere un ${idTarget}.`);
-//         mostrarError(mensajes.pop());
-//     }
-// }
-
-// // Esto Valida que: 
+// // Esto Valida que:
 // // - El campo nombre no este vacio o en blanco
 // // - Que tenga como maximo 50 caracteres
 
@@ -46,7 +55,7 @@
 //     }
 // }
 
-// // Esto Valida que: 
+// // Esto Valida que:
 // // - El campo nombre no este vacio o en blanco
 // // - Deber estar en formato e-mail conteniendo el caracter especial @ seguido de un dominio o proveedor seguido de un punto(.)
 // function validarEmail(mensajes){
@@ -62,5 +71,5 @@
 //     errorContainer.append(errorParagraph);
 
 //     errorContainer.classList.add('show');
-//     errorContainer.scrollIntoView({behavior: 'smooth'});    
+//     errorContainer.scrollIntoView({behavior: 'smooth'});
 // }

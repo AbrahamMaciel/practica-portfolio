@@ -441,18 +441,33 @@ span#mensaje-underline {
 }
 
 p.error__text{
+  display: none;
   position: absolute;
   color: red;
   top: -35%;
   margin: 0;
   padding-left: 8px;
   font-size: 14px;
+
+  animation: show 500ms forwards;
 }
 
 p#error__mensaje{
   top: -13%;
 }
 
+p.error__text.show{
+  display: block;
+}
+
+@keyframes show {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+} 
 
 /* div.formcontacto__error__message{
   display: none;
