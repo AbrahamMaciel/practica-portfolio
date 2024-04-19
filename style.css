@@ -440,7 +440,7 @@ span#mensaje-underline {
   bottom: 2px;
 }
 
-p.error__text{
+p.error__text {
   display: none;
   position: absolute;
   color: red;
@@ -449,58 +449,26 @@ p.error__text{
   padding-left: 8px;
   font-size: 14px;
 
+  /* Me pregunto si habia diferencia entre usar animation o transition */
   animation: show 500ms forwards;
 }
 
-p#error__mensaje{
+p#error__mensaje {
   top: -13%;
 }
 
-p.error__text.show{
+p.error__text.show {
   display: block;
 }
 
 @keyframes show {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
-} 
-
-/* div.formcontacto__error__message{
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  color: #ffffff;
-  background-color: #fd2b2b;
-  border-radius: 4px;
-  border-bottom: 2px solid #fd2b2b;
-  padding: 0.5rem 0;
-
-  animation: show 2s forwards;
 }
-
-div.formcontacto__error__message.show{
-  display: flex;
-}
-
-p.error__message__item{
-  padding: 0.4rem 1rem;
-  line-height: 120%;
-  margin: 0;
-}
-
-@keyframes show {
-  0%{
-    height: 0%;
-  }
-  100%{
-    height: 100%;
-  }
-} */
-
 
 button.formcontacto__boton {
   padding: 15px 10px;
@@ -510,6 +478,8 @@ button.formcontacto__boton {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   cursor: pointer;
+
+  transition: opacity 200ms ease-in;
 }
 
 /* Pequenio truquito para desactivar el boton y permitir a la vez el pointer: none */
@@ -518,7 +488,7 @@ button.formcontacto__boton {
   cursor: not-allowed !important;
 }
 
-.disabled:active{
+.disabled:active {
   pointer-events: none;
 }
 
@@ -659,7 +629,7 @@ Utiliza las referencias de los breakpoints @media abajo */
     font-size: 1rem;
   }
 
-  ul.title__network{
+  ul.title__network {
     justify-content: space-between;
   }
 
@@ -747,16 +717,15 @@ Utiliza las referencias de los breakpoints @media abajo */
     align-self: baseline;
   }
 
-  p#error__mensaje{
+  p#error__mensaje {
     top: -15%;
   }
 }
 
 /*Mobile*/
+/* Aca me perdi un poco porque intente implementar un ancho global con --root: pero como que las secciones no tienen el mismo ancho en mobile me trajo problemas.*/
 @media (max-width: 425px) {
-
   /*Menu*/
-
   header.menu__header > img {
     align-self: center;
   }
@@ -765,7 +734,7 @@ Utiliza las referencias de los breakpoints @media abajo */
     font-weight: 100;
   }
 
-  li.menu__list__item:last-child > a{
+  li.menu__list__item:last-child > a {
     color: #464646;
   }
 
@@ -791,13 +760,13 @@ Utiliza las referencias de los breakpoints @media abajo */
 
   li.title__network__item > a {
     color: #121212;
-    font-size: 16px; 
+    font-size: 16px;
   }
 
   /*Sección sobre mi*/
 
   /*Skills*/
-  section.skills{
+  section.skills {
     width: 90%;
   }
 
@@ -815,7 +784,7 @@ Utiliza las referencias de los breakpoints @media abajo */
   }
 
   /*Hobbies*/
-  section.hobbies{
+  section.hobbies {
     width: 90%;
   }
 
@@ -833,7 +802,7 @@ Utiliza las referencias de los breakpoints @media abajo */
   }
 
   /*Formación Académica*/
-  div.academic__container{
+  div.academic__container {
     width: 85%;
   }
 
@@ -842,7 +811,7 @@ Utiliza las referencias de los breakpoints @media abajo */
     align-items: center;
   }
 
-  div.academic__courses__box{
+  div.academic__courses__box {
     /* width: var(--ancho-total); */
     width: 100%;
   }
@@ -871,7 +840,7 @@ Utiliza las referencias de los breakpoints @media abajo */
 
   /*Contacto*/
 
-  div.formcontacto__contacto{
+  div.formcontacto__contacto {
     width: 85%;
   }
 

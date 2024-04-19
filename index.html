@@ -34,7 +34,7 @@
               </li>
               <li class="menu__list__item"><a href="#xp">Proyectos</a></li>
               <li class="menu__list__item">
-                <a href="#contacto">Contacto@fulana.com</a>
+                <a href="#contacto">contacto@fulana.com</a>
               </li>
             </ul>
           </nav>
@@ -359,30 +359,47 @@
               lo antes posible.
             </p>
             <form class="formcontacto__form" name="form">
-
               <div class="standard-input formcontacto__input">
-                <p class="error__text" id="error__nombre">Nombre invalido o vacio</p>
-                <input type="text" name="nombre" id="nombre" placeholder="" oninput="validarForm()"/>
+                <p class="error__text" id="error__nombre"></p>
+                <input
+                  type="text"
+                  name="nombre"
+                  id="nombre"
+                  placeholder=" "
+                  oninput="validarForm()"
+                />
                 <label for="nombre">Nombre</label>
                 <span class="underline"></span>
               </div>
 
               <div class="standard-input formcontacto__input">
-                <p class="error__text" id="error__email">Direccion de correo invalida</p>
-                <input type="text" name="email" id="email" placeholder=" " oninput="validarForm()" />
+                <p class="error__text" id="error__email"></p>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder=" "
+                  oninput="validarForm()"
+                />
                 <label for="email">E-mail</label>
                 <span class="underline"></span>
               </div>
 
               <div class="standard-input formcontacto__input">
-                <p class="error__text" id="error__asunto">Maximo de 50 caracteres</p>
-                <input type="text" name="asunto" id="asunto" placeholder=" " oninput="validarForm()" />
+                <p class="error__text" id="error__asunto"></p>
+                <input
+                  type="text"
+                  name="asunto"
+                  id="asunto"
+                  placeholder=" "
+                  oninput="validarForm()"
+                />
                 <label for="asunto">Asunto</label>
                 <span class="underline"></span>
               </div>
 
               <div class="standard-input formcontacto__textarea">
-                <p class="error__text" id="error__mensaje">Maximo de 300 caracteres</p>
+                <p class="error__text" id="error__mensaje"></p>
                 <textarea
                   name="mensaje"
                   id="mensaje"
