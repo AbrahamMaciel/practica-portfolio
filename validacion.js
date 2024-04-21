@@ -106,16 +106,7 @@ function validarMensaje() {
   return false;
 }
 
-function validarForm() {
-  let botonEnviar = document.querySelector(".formcontacto__boton");
-
-  // Esto quedo masomenos idealmente no tendria que hacer las validaciones 2 veces pero sin hacerlo de esta forma solo valida 1 campo a la vez.../
-  // Parece que cuando js evalua el if si el primero no pasa la prueba directamente asume que lo que queda no importa porque el AND nunca se va a cumplir, haciendo que las validaciones sean secuenciales.
-  validarNombre();
-  validarEmail();
-  validarAsunto();
-  validarMensaje();
-
+function validarEnvio(botonEnviar){
   if (
     validarNombre() &&
     validarEmail() &&
@@ -126,4 +117,17 @@ function validarForm() {
   } else {
     botonEnviar.classList.add("disabled");
   }
+}
+
+function validarForm() {
+  let botonEnviar = document.querySelector(".formcontacto__boton");
+
+  // Esto quedo masomenos idealmente no tendria que hacer las validaciones 2 veces pero sin hacerlo de esta forma solo valida 1 campo a la vez.../
+  // Parece que cuando js evalua el if si el primero no pasa la prueba directamente asume que lo que queda no importa porque el AND nunca se va a cumplir, haciendo que las validaciones sean secuenciales.
+  validarNombre();
+  validarEmail();
+  validarAsunto();
+  validarMensaje();
+
+  validarEnvio(botonEnviar);
 }

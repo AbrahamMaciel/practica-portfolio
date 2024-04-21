@@ -89,15 +89,34 @@ h3.menu__title {
 ul.menu__list {
   display: flex;
   flex-grow: 1;
-  align-items: end;
+  align-items: center;
   justify-content: end;
   margin: 0;
   padding: 0;
   gap: 2rem;
 }
 
+li.menu__list__item:hover{
+  text-decoration: underline 2px;
+  transform: scale(1.2);
+  transition: transform 200ms ease-in-out;
+}
+
 li.menu__list__item:last-child {
   font-weight: bold;
+}
+
+
+a.menu__list__item__container{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: end;
+}
+
+/* Por alguna razon si aca le daba un width porcentual pasa que la imagen cambia de tamanio pero el container padre seguia del tamanio original de la imagen. */
+img.item__logo{
+  width: 28px;
 }
 
 /*Sección Title*/
